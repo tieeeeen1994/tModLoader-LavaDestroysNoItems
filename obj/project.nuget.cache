@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "I6hdXRu9KkA6nBdPlaqymL1QUQAY+f8ruGMvB+RQDNB3lRcFeqjR3iMpHFuCAxSWaBczV1XHixEq96idLXMyEw==",
+  "success": true,
+  "projectFilePath": "/Users/jenek/Library/Application Support/Terraria/tModLoader/ModSources/LavaDestroysNoItems/LavaDestroysNoItems.csproj",
+  "expectedPackageFiles": [
+    "/Users/jenek/.nuget/packages/tmodloader.codeassist/0.1.5/tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

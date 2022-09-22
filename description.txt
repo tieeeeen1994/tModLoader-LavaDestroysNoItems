@@ -1,0 +1,5 @@
+A simple mod where in all items will not be destroyed by lava... except Guide Voodoo Doll.
+
+GitHub Repository: 
+
+Changelog:
