@@ -8,9 +8,18 @@ namespace LavaDestroysNoItems
 	{
         public class AllItems : GlobalItem
         {
-            public override bool? CanBurnInLava(Item item)
+            public override void SetStaticDefaults()
             {
-                return item.type == ItemID.GuideVoodooDoll;
+                On_Item.CheckLavaDeath += On_Item_CheckLavaDeath;
+            }
+
+            private void On_Item_CheckLavaDeath(On_Item.orig_CheckLavaDeath orig, Item self, int i)
+            {
+                if (self.rare == ItemRarityID.White)
+                {
+                    if (Main.netMode != NetmodeID.SinglePlayer) NetMessage.SendData(MessageID.SyncItem, -1, -1, null, i);
+                }
+                else orig(self, i);
             }
         }
     }
