@@ -15,7 +15,7 @@ namespace LavaDestroysNoItems
 
             private void On_Item_CheckLavaDeath(On_Item.orig_CheckLavaDeath orig, Item self, int i)
             {
-                if (self.rare == ItemRarityID.White)
+                if (self.rare == ItemRarityID.White && self.type != ItemID.GuideVoodooDoll )
                 {
                     if (Main.netMode != NetmodeID.SinglePlayer) NetMessage.SendData(MessageID.SyncItem, -1, -1, null, i);
                 }
