@@ -2,7 +2,13 @@
 
 A simple mod where in all items will not be destroyed by lava... except Guide Voodoo Doll.
 
+The mod can be configured to allow the player to add more items into the list of items can be destroyed by lava.
+
 # Changelog
+
+v0.4
+- Refactor the mod.
+- Add configuration for flexibility.
 
 v0.3
 - Fix a bug where the Guide Voodoo Doll isn't being destroyed by Lava.

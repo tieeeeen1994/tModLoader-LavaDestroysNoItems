@@ -1,0 +1,14 @@
+Configs: {
+	Config: {
+		LavaDestroyables: {
+			Label: Items that can still be destroyed by Lava
+			Tooltip:
+				'''
+				Include items here that can still be deleted when the item touches lava.
+				Modded items can be included here when they do something else when destroyed by lava.
+				'''
+		}
+
+		DisplayName: Server Configuration
+	}
+}
