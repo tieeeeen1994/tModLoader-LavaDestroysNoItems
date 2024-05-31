@@ -22,10 +22,16 @@ namespace LavaDestroysNoItems
             if (modConfig.LavaDestroyables.Exists(definition => definition.Type == self.type))
             {
                 orig(self, i); // This still doesn't destroy items that have higher rarity than white.
-            }
-            else if (Main.netMode != NetmodeID.SinglePlayer)
-            {
-                NetMessage.SendData(MessageID.SyncItem, -1, -1, null, i);
+                if (self.active)
+                {
+                    self.active = false;
+                    self.type = ItemID.None;
+                    self.stack = 0;
+                    if (Main.netMode != NetmodeID.SinglePlayer)
+                    {
+                        NetMessage.SendData(MessageID.SyncItem, -1, -1, null, i);
+                    }
+                }
             }
         }
     }
